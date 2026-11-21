@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "created_utc": "2026-11-20T21:09:43+00:00",
+    "python": "3.13.6",
+    "source": "this project (trained and evaluated here)",
+    "display_name": "BERT (bert-base-uncased fine-tuned here)",
+    "model_key": "bert_fnc1",
+    "trained_on": "FNC-1 train fold (44,973 pairs, grouped split)",
+    "evaluated_on": "official FNC-1 competition test set (25,413 pairs)",
+    "epochs_completed": 2.999,
+    "optimizer_steps": 8430,
+    "validation_metrics": {
+      "n": 4999,
+      "accuracy": 0.9583916783356672,
+      "macro": {
+        "precision": 0.8517886800436052,
+        "recall": 0.8600416200829707,
+        "f1": 0.8550568494639498
+      },
+      "weighted": {
+        "precision": 0.9579829654573321,
+        "recall": 0.9583916783356672,
+        "f1": 0.95806743280242
+      },
+      "per_class": {
+        "agree": {
+          "precision": 0.8035190615835777,
+          "recall": 0.7465940054495913,
+          "f1": 0.7740112994350282,
+          "support": 367,
+          "predicted": 341
+        },
+        "disagree": {
+          "precision": 0.7127659574468085,
+          "recall": 0.7976190476190477,
+          "f1": 0.7528089887640449,
+          "support": 84,
+          "predicted": 94
+        },
+        "discuss": {
+          "precision": 0.8968609865470852,
+          "recall": 0.8978675645342312,
+          "f1": 0.89736399326977,
+          "support": 891,
+          "predicted": 892
+        },
+        "unrelated": {
+          "precision": 0.9940087145969498,
+          "recall": 0.9980858627290129,
+          "f1": 0.996043116386956,
+          "support": 3657,
+          "predicted": 3672
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "agree",
+          "disagree",
+          "discuss",
+          "unrelated"
+        ],
+        "rows_gold_cols_pred": [
+          [
+            274,
+            14,
+            77,
+            2
+          ],
+          [
+            5,
+            67,
+            10,
+            2
+          ],
+          [
+            61,
+            12,
+            800,
+            18
+          ],
+          [
+            1,
+            1,
+            5,
+            3650
+          ]
+        ]
+      },
+      "fnc": {
+        "score": 2098.25,
+        "max": 2256.25,
+        "null": 914.25,
+        "relative": 0.9299722991689751,
+        "null_relative": 0.40520775623268696
+      },
+      "related_vs_unrelated_accuracy": 0.9941988397679536,
+      "majority_baseline_accuracy": 0.7315463092618524
+    },
+    "inference_seconds": 484.1,
+    "device": "cuda",
+    "note": "Checkpoint selected on validation macro-F1 after 2.999 epochs."
+  },
+  "metrics": {
+    "n": 25413,
+    "accuracy": 0.9256286152756463,
+    "macro": {
+      "precision": 0.757829302172645,
+      "recall": 0.7329261497044788,
+      "f1": 0.7438918564955703
+    },
+    "weighted": {
+      "precision": 0.9231497643540064,
+      "recall": 0.9256286152756463,
+      "f1": 0.9242135562570778
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.676255230125523,
+        "recall": 0.6794534944823962,
+        "f1": 0.6778505897771953,
+        "support": 1903,
+        "predicted": 1912
+      },
+      "disagree": {
+        "precision": 0.53584229390681,
+        "recall": 0.42898134863701576,
+        "f1": 0.47649402390438245,
+        "support": 697,
+        "predicted": 558
+      },
+      "discuss": {
+        "precision": 0.8340837460603332,
+        "recall": 0.8299731182795699,
+        "f1": 0.832023355041545,
+        "support": 4464,
+        "predicted": 4442
+      },
+      "unrelated": {
+        "precision": 0.9851359385979136,
+        "recall": 0.9932966374189329,
+        "f1": 0.9891994572591587,
+        "support": 18349,
+        "predicted": 18501
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          1293,
+          76,
+          481,
+          53
+        ],
+        [
+          175,
+          299,
+          162,
+          61
+        ],
+        [
+          424,
+          174,
+          3705,
+          161
+        ],
+        [
+          20,
+          9,
+          94,
+          18226
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 10226.5,
+      "max": 11651.25,
+      "null": 4587.25,
+      "relative": 0.8777169831563137,
+      "null_relative": 0.3937131209097736
+    },
+    "related_vs_unrelated_accuracy": 0.9843387242749774,
+    "majority_baseline_accuracy": 0.7220320308503522
+  }
+}

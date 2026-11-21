@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "created_utc": "2026-11-20T19:08:57+00:00",
+    "python": "3.13.6",
+    "source": "original repository (historical, self-reported, not reproduced)",
+    "display_name": "Bernoulli Naive Bayes",
+    "features": "Binary bag of words (Count and TF-IDF files are byte-identical)",
+    "note": "Original OvR argmax bug: uncertain rows forced to 'unrelated'.",
+    "file": "BernoulliNB_with_CountVectorizer.csv",
+    "sha256": "4b5f690e1e3fe1afa87f99c24822175c0e3b01918aab173b10a1702efb969184",
+    "evaluated_on": "official FNC-1 competition test set (25,413 pairs)"
+  },
+  "metrics": {
+    "n": 25413,
+    "accuracy": 0.6654468185574313,
+    "macro": {
+      "precision": 0.24185720837232544,
+      "recall": 0.262446072476482,
+      "f1": 0.24860628956875389
+    },
+    "weighted": {
+      "precision": 0.5656983124988954,
+      "recall": 0.6654468185574313,
+      "f1": 0.6089340225893998
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1903,
+        "predicted": 0
+      },
+      "disagree": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 697,
+        "predicted": 0
+      },
+      "discuss": {
+        "precision": 0.24308681672025723,
+        "recall": 0.1693548387096774,
+        "f1": 0.19963031423290203,
+        "support": 4464,
+        "predicted": 3110
+      },
+      "unrelated": {
+        "precision": 0.7243420167690445,
+        "recall": 0.8804294511962505,
+        "f1": 0.7947948440421135,
+        "support": 18349,
+        "predicted": 22303
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          0,
+          0,
+          140,
+          1763
+        ],
+        [
+          0,
+          0,
+          20,
+          677
+        ],
+        [
+          0,
+          0,
+          756,
+          3708
+        ],
+        [
+          0,
+          0,
+          2194,
+          16155
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 4834.75,
+      "max": 11651.25,
+      "null": 4587.25,
+      "relative": 0.4149554768801631,
+      "null_relative": 0.3937131209097736
+    },
+    "related_vs_unrelated_accuracy": 0.6717428087986463,
+    "majority_baseline_accuracy": 0.7220320308503522
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "display_name": "BERT (bert-base-uncased fine-tuned on FNC-1)",
+  "base_model": "google-bert/bert-base-uncased@86b5e0934494bd15c9632b12f734a8a67f723594",
+  "trained_by": "this project (train_bert.py)",
+  "smoke_test": false,
+  "max_length": 512,
+  "hyperparameters": {
+    "max_length": 512,
+    "micro_batch_size": 8,
+    "grad_accum_steps": 2,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_steps": 500,
+    "epochs": 3,
+    "eval_batch_size": 32,
+    "fp16": true
+  },
+  "optimizer_steps": 8430,
+  "planned_steps": 8433,
+  "epochs_completed": 2.999,
+  "selection": "best validation macro-F1",
+  "validation_metrics": {
+    "n": 4999,
+    "accuracy": 0.9583916783356672,
+    "macro": {
+      "precision": 0.8517886800436052,
+      "recall": 0.8600416200829707,
+      "f1": 0.8550568494639498
+    },
+    "weighted": {
+      "precision": 0.9579829654573321,
+      "recall": 0.9583916783356672,
+      "f1": 0.95806743280242
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.8035190615835777,
+        "recall": 0.7465940054495913,
+        "f1": 0.7740112994350282,
+        "support": 367,
+        "predicted": 341
+      },
+      "disagree": {
+        "precision": 0.7127659574468085,
+        "recall": 0.7976190476190477,
+        "f1": 0.7528089887640449,
+        "support": 84,
+        "predicted": 94
+      },
+      "discuss": {
+        "precision": 0.8968609865470852,
+        "recall": 0.8978675645342312,
+        "f1": 0.89736399326977,
+        "support": 891,
+        "predicted": 892
+      },
+      "unrelated": {
+        "precision": 0.9940087145969498,
+        "recall": 0.9980858627290129,
+        "f1": 0.996043116386956,
+        "support": 3657,
+        "predicted": 3672
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          274,
+          14,
+          77,
+          2
+        ],
+        [
+          5,
+          67,
+          10,
+          2
+        ],
+        [
+          61,
+          12,
+          800,
+          18
+        ],
+        [
+          1,
+          1,
+          5,
+          3650
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 2098.25,
+      "max": 2256.25,
+      "null": 914.25,
+      "relative": 0.9299722991689751,
+      "null_relative": 0.40520775623268696
+    },
+    "related_vs_unrelated_accuracy": 0.9941988397679536,
+    "majority_baseline_accuracy": 0.7315463092618524
+  },
+  "split": "StratifiedGroupKFold by Body ID, seed 42 (data/splits/train_val_split.json)",
+  "input_format": "sentence pair: [CLS] headline [SEP] body [SEP] with token_type_ids",
+  "created": "2026-11-21T02:29:09"
+}

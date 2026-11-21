@@ -1,0 +1,8 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+# The pip ecosystem is intentionally not enabled: requirements-lock.txt pins a CUDA local-version
+# build of torch (+cu126) that Dependabot cannot resolve. Add it if you drop that pin.

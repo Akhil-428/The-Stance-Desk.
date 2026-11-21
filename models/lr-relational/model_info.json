@@ -1,0 +1,100 @@
+{
+  "display_name": "Logistic Regression (TF-IDF + relation features)",
+  "trained_by": "this project (train_baselines.py)",
+  "sha256": "f2c62d72e22ccd3d481d36c472e42208bad66d94df69128f2feaf5a101a75069",
+  "classes": [
+    "agree",
+    "disagree",
+    "discuss",
+    "unrelated"
+  ],
+  "validation_metrics": {
+    "n": 4999,
+    "accuracy": 0.9303860772154431,
+    "macro": {
+      "precision": 0.7459301432989385,
+      "recall": 0.6818475770058119,
+      "f1": 0.7005716713073504
+    },
+    "weighted": {
+      "precision": 0.9264968181326906,
+      "recall": 0.9303860772154431,
+      "f1": 0.9270868758132401
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.7085889570552147,
+        "recall": 0.6294277929155313,
+        "f1": 0.6666666666666666,
+        "support": 367,
+        "predicted": 326
+      },
+      "disagree": {
+        "precision": 0.47368421052631576,
+        "recall": 0.21428571428571427,
+        "f1": 0.29508196721311475,
+        "support": 84,
+        "predicted": 38
+      },
+      "discuss": {
+        "precision": 0.8156822810590632,
+        "recall": 0.898989898989899,
+        "f1": 0.8553123331553657,
+        "support": 891,
+        "predicted": 982
+      },
+      "unrelated": {
+        "precision": 0.9857651245551602,
+        "recall": 0.9846869018321028,
+        "f1": 0.9852257181942544,
+        "support": 3657,
+        "predicted": 3653
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          231,
+          6,
+          117,
+          13
+        ],
+        [
+          47,
+          18,
+          16,
+          3
+        ],
+        [
+          40,
+          14,
+          801,
+          36
+        ],
+        [
+          8,
+          0,
+          48,
+          3601
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 2010.25,
+      "max": 2256.25,
+      "null": 914.25,
+      "relative": 0.8909695290858726,
+      "null_relative": 0.40520775623268696
+    },
+    "related_vs_unrelated_accuracy": 0.9783956791358271,
+    "majority_baseline_accuracy": 0.7315463092618524
+  },
+  "created": "2026-11-21T00:47:18",
+  "note": "joblib (pickle) file written by this project; integrity-checked by hash before loading."
+}

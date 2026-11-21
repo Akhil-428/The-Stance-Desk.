@@ -1,0 +1,53 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── Local environment, caches, scratch ────────────────────────────────────
+.env
+cache/
+tmp/
+nlp_project_implementationcachepip/
+env.sh
+
+# ── Training runs (checkpoints, logs). The final log is kept in docs/. ─────
+runs/
+
+# ── Model weights are NOT stored in git (GitHub's hard limit is 100 MB/file).
+#    Only small metadata is tracked: models/README.md and each model_info.json.
+#    See models/README.md for how to obtain or re-create the weights.
+models/*/*
+!models/*/model_info.json
+!models/README.md
+
+# ── Datasets are fetched, not redistributed. See data/README.md. ──────────
+data/raw/fnc1/*
+!data/raw/fnc1/SHA256SUMS.txt
+data/historical/*.csv
+
+# ── Regenerable outputs (metrics JSON in outputs/metrics IS tracked) ──────
+outputs/predictions/
+
+# ── Local build artefacts that are not part of the published project ──────
+backup_*/
+assets/
+docs/FINAL_REPORT.md
+docs/TEST_RESULTS.md
+docs/TIMELOG.txt
+docs/per_class_demo.txt
+docs/pytest_output.txt
+docs/pytest_output_redesign.txt
+
+# ── OS / editor ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

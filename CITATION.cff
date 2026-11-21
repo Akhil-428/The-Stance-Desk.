@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, and cite the FNC-1 task and the original project it re-implements."
+title: "The Stance Desk: headline-article stance detection on FNC-1"
+type: software
+version: 1.0.0
+date-released: 2026-11-21
+license: Apache-2.0
+repository-code: "https://github.com/Akhil-428/The-Stance-Desk"
+abstract: >-
+  A leakage-controlled re-implementation of BERT-based stance detection on the
+  Fake News Challenge (FNC-1) dataset, with bug-fixed baselines, the official
+  FNC-1 score, and a Streamlit interface. Stance detection classifies how an
+  article body relates to a headline (agree, disagree, discuss, unrelated); it
+  does not verify whether a claim is true.
+keywords:
+  - stance detection
+  - natural language processing
+  - BERT
+  - FNC-1
+  - fake news
+  - Streamlit
+authors:
+  - alias: "Akhil-428"
+references:
+  - type: software
+    title: "Fake-News-Stance-Detection"
+    authors:
+      - family-names: Jin
+        given-names: Zeyong
+      - family-names: Wu
+        given-names: Yuqing
+      - family-names: Feng
+        given-names: Zhi
+    year: 2021
+    url: "https://github.com/zeyongj/Fake-News-Stance-Detection"
+  - type: generic
+    title: "Fake News Challenge Stage 1 (FNC-1): Stance Detection"
+    url: "https://github.com/FakeNewsChallenge/fnc-1"
+  - type: article
+    title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+    authors:
+      - family-names: Devlin
+        given-names: Jacob
+      - family-names: Chang
+        given-names: Ming-Wei
+      - family-names: Lee
+        given-names: Kenton
+      - family-names: Toutanova
+        given-names: Kristina
+    year: 2018
+    journal: "arXiv preprint arXiv:1810.04805"
+    url: "https://arxiv.org/abs/1810.04805"

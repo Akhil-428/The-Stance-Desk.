@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "created_utc": "2026-11-20T19:17:16+00:00",
+    "python": "3.13.6",
+    "source": "this project (trained and evaluated here)",
+    "display_name": "Logistic Regression (TF-IDF + relation features)",
+    "model_key": "lr_relational",
+    "trained_on": "FNC-1 train fold (44973 pairs, grouped split)",
+    "fit_seconds": 251.2,
+    "evaluated_on": "official FNC-1 competition test set (25,413 pairs)",
+    "validation_metrics": {
+      "n": 4999,
+      "accuracy": 0.9303860772154431,
+      "macro": {
+        "precision": 0.7459301432989385,
+        "recall": 0.6818475770058119,
+        "f1": 0.7005716713073504
+      },
+      "weighted": {
+        "precision": 0.9264968181326906,
+        "recall": 0.9303860772154431,
+        "f1": 0.9270868758132401
+      },
+      "per_class": {
+        "agree": {
+          "precision": 0.7085889570552147,
+          "recall": 0.6294277929155313,
+          "f1": 0.6666666666666666,
+          "support": 367,
+          "predicted": 326
+        },
+        "disagree": {
+          "precision": 0.47368421052631576,
+          "recall": 0.21428571428571427,
+          "f1": 0.29508196721311475,
+          "support": 84,
+          "predicted": 38
+        },
+        "discuss": {
+          "precision": 0.8156822810590632,
+          "recall": 0.898989898989899,
+          "f1": 0.8553123331553657,
+          "support": 891,
+          "predicted": 982
+        },
+        "unrelated": {
+          "precision": 0.9857651245551602,
+          "recall": 0.9846869018321028,
+          "f1": 0.9852257181942544,
+          "support": 3657,
+          "predicted": 3653
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "agree",
+          "disagree",
+          "discuss",
+          "unrelated"
+        ],
+        "rows_gold_cols_pred": [
+          [
+            231,
+            6,
+            117,
+            13
+          ],
+          [
+            47,
+            18,
+            16,
+            3
+          ],
+          [
+            40,
+            14,
+            801,
+            36
+          ],
+          [
+            8,
+            0,
+            48,
+            3601
+          ]
+        ]
+      },
+      "fnc": {
+        "score": 2010.25,
+        "max": 2256.25,
+        "null": 914.25,
+        "relative": 0.8909695290858726,
+        "null_relative": 0.40520775623268696
+      },
+      "related_vs_unrelated_accuracy": 0.9783956791358271,
+      "majority_baseline_accuracy": 0.7315463092618524
+    }
+  },
+  "metrics": {
+    "n": 25413,
+    "accuracy": 0.8823043324282848,
+    "macro": {
+      "precision": 0.6291586848241337,
+      "recall": 0.5746870121082368,
+      "f1": 0.5733205816692988
+    },
+    "weighted": {
+      "precision": 0.8670822456924535,
+      "recall": 0.8823043324282848,
+      "f1": 0.8713835083748929
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.5359442060085837,
+        "recall": 0.5249605885444035,
+        "f1": 0.5303955402176799,
+        "support": 1903,
+        "predicted": 1864
+      },
+      "disagree": {
+        "precision": 0.29310344827586204,
+        "recall": 0.024390243902439025,
+        "f1": 0.045033112582781455,
+        "support": 697,
+        "predicted": 58
+      },
+      "discuss": {
+        "precision": 0.7313337587747287,
+        "recall": 0.7701612903225806,
+        "f1": 0.7502454991816694,
+        "support": 4464,
+        "predicted": 4701
+      },
+      "unrelated": {
+        "precision": 0.9562533262373603,
+        "recall": 0.9792359256635239,
+        "f1": 0.9676081746950644,
+        "support": 18349,
+        "predicted": 18790
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          999,
+          11,
+          724,
+          169
+        ],
+        [
+          268,
+          17,
+          246,
+          166
+        ],
+        [
+          532,
+          7,
+          3438,
+          487
+        ],
+        [
+          65,
+          23,
+          293,
+          17968
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 9393.0,
+      "max": 11651.25,
+      "null": 4587.25,
+      "relative": 0.8061795944641132,
+      "null_relative": 0.3937131209097736
+    },
+    "related_vs_unrelated_accuracy": 0.9526620233738637,
+    "majority_baseline_accuracy": 0.7220320308503522
+  }
+}

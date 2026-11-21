@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "created_utc": "2026-11-20T19:08:56+00:00",
+    "python": "3.13.6",
+    "source": "original repository (historical, self-reported, not reproduced)",
+    "display_name": "BERT (authors' checkpoint)",
+    "features": "bert-base-uncased fine-tuned (checkpoint not public)",
+    "note": "",
+    "file": "BERT.csv",
+    "sha256": "dc967d77505c6a88adee3eb8e66db5987bf4dc23845036b81dff2a9be9dc1fb0",
+    "evaluated_on": "official FNC-1 competition test set (25,413 pairs)"
+  },
+  "metrics": {
+    "n": 25413,
+    "accuracy": 0.9037500491874237,
+    "macro": {
+      "precision": 0.6913653493850407,
+      "recall": 0.6937639248934337,
+      "f1": 0.6909631850392672
+    },
+    "weighted": {
+      "precision": 0.9060421347068395,
+      "recall": 0.9037500491874237,
+      "f1": 0.9043580503991685
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.5961251862891207,
+        "recall": 0.6305832895428272,
+        "f1": 0.6128702757916241,
+        "support": 1903,
+        "predicted": 2013
+      },
+      "disagree": {
+        "precision": 0.40602836879432624,
+        "recall": 0.3285509325681492,
+        "f1": 0.36320380650277556,
+        "support": 697,
+        "predicted": 564
+      },
+      "discuss": {
+        "precision": 0.7740089906007356,
+        "recall": 0.8485663082437276,
+        "f1": 0.8095746954477453,
+        "support": 4464,
+        "predicted": 4894
+      },
+      "unrelated": {
+        "precision": 0.9892988518559804,
+        "recall": 0.967355169219031,
+        "f1": 0.9782039624149238,
+        "support": 18349,
+        "predicted": 17942
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          1200,
+          157,
+          494,
+          52
+        ],
+        [
+          221,
+          229,
+          193,
+          54
+        ],
+        [
+          485,
+          105,
+          3788,
+          86
+        ],
+        [
+          107,
+          73,
+          419,
+          17750
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 10068.25,
+      "max": 11651.25,
+      "null": 4587.25,
+      "relative": 0.864134749490398,
+      "null_relative": 0.3937131209097736
+    },
+    "related_vs_unrelated_accuracy": 0.9688741982449928,
+    "majority_baseline_accuracy": 0.7220320308503522
+  }
+}

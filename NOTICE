@@ -1,0 +1,27 @@
+The Stance Desk
+Copyright 2026 Akhil-428
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It builds on, and is grateful to, the following work:
+
+1. Fake-News-Stance-Detection by Zeyong Jin, Yuqing Wu and Zhi Feng
+   (SFU CMPT 413/713, Group AWSL, December 2021).
+   https://github.com/zeyongj/Fake-News-Stance-Detection  (Apache-2.0)
+   The task framing, label mapping, original hyper-parameters and baseline
+   design come from that project. Its committed prediction files are used
+   read-only to recompute the "historical" results shown in this project.
+   No source code from that repository is copied.
+
+2. Fake News Challenge, Stage 1 (FNC-1) dataset and scoring rule.
+   https://github.com/FakeNewsChallenge/fnc-1
+   The dataset is not redistributed here; it is fetched from the upstream
+   repository at a pinned commit. Please consult that repository for its terms.
+
+3. BERT (bert-base-uncased), Devlin et al., 2018, released by Google and
+   distributed on Hugging Face as google-bert/bert-base-uncased (Apache-2.0).
+   Weights are not redistributed here.
+
+4. Open-source libraries: PyTorch, Hugging Face Transformers, scikit-learn,
+   Streamlit, pandas, NumPy, SciPy, Plotly, safetensors and pytest, each under
+   its own license.

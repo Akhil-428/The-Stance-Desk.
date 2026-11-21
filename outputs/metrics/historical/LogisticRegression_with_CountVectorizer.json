@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "created_utc": "2026-11-20T19:08:57+00:00",
+    "python": "3.13.6",
+    "source": "original repository (historical, self-reported, not reproduced)",
+    "display_name": "Logistic Regression + TF-IDF",
+    "features": "TF-IDF (file is mislabelled 'CountVectorizer' in the original repo)",
+    "note": "Original OvR argmax bug: uncertain rows forced to 'unrelated'.",
+    "file": "LogisticRegression_with_CountVectorizer.csv",
+    "sha256": "244dc0e1562e295eb6d724650890bc8889cb3ca0494eddf2d456d977c0c2eec8",
+    "evaluated_on": "official FNC-1 competition test set (25,413 pairs)"
+  },
+  "metrics": {
+    "n": 25413,
+    "accuracy": 0.706331405186322,
+    "macro": {
+      "precision": 0.26301292403943777,
+      "recall": 0.26236285912859214,
+      "f1": 0.24286612415512188
+    },
+    "weighted": {
+      "precision": 0.5818636367482759,
+      "recall": 0.706331405186322,
+      "f1": 0.6216797295066462
+    },
+    "per_class": {
+      "agree": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1903,
+        "predicted": 0
+      },
+      "disagree": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 697,
+        "predicted": 0
+      },
+      "discuss": {
+        "precision": 0.32532920216886135,
+        "recall": 0.09408602150537634,
+        "f1": 0.14596003475238922,
+        "support": 4464,
+        "predicted": 1291
+      },
+      "unrelated": {
+        "precision": 0.7267224939888898,
+        "recall": 0.9553654150089923,
+        "f1": 0.8255044618680982,
+        "support": 18349,
+        "predicted": 24122
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "agree",
+        "disagree",
+        "discuss",
+        "unrelated"
+      ],
+      "rows_gold_cols_pred": [
+        [
+          0,
+          0,
+          50,
+          1853
+        ],
+        [
+          0,
+          0,
+          2,
+          695
+        ],
+        [
+          0,
+          0,
+          420,
+          4044
+        ],
+        [
+          0,
+          0,
+          819,
+          17530
+        ]
+      ]
+    },
+    "fnc": {
+      "score": 4815.5,
+      "max": 11651.25,
+      "null": 4587.25,
+      "relative": 0.41330329363802165,
+      "null_relative": 0.3937131209097736
+    },
+    "related_vs_unrelated_accuracy": 0.7083776020147169,
+    "majority_baseline_accuracy": 0.7220320308503522
+  }
+}

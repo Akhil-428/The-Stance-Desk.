@@ -1,0 +1,26 @@
+[server]
+address = "localhost"
+port = 8501
+headless = false          # opens the browser automatically on `streamlit run app.py`
+runOnSave = false
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501
+
+# Dark newsroom base. The full visual system lives in ui/static/stance_desk.css;
+# these values only make Streamlit's own widgets start from the same palette.
+[theme]
+base = "dark"
+primaryColor = "#d23a32"
+backgroundColor = "#0b0c0e"
+secondaryBackgroundColor = "#15181d"
+textColor = "#ece8df"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = false
+showSidebarNavigation = false

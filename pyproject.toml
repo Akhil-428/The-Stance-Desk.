@@ -1,0 +1,25 @@
+[project]
+name = "stance-desk"
+version = "1.0.0"
+description = "Headline-article stance detection on FNC-1 with a fine-tuned BERT and a Streamlit newsroom interface."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["backup_*", "tmp", "cache", "runs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+    "E501",   # long lines in HTML/CSS string literals of the UI
+    "E741",   # `l` as a short loop variable for "label"
+    "E701",   # compact `if x: stmt` in the training loop
+    "E702",   # compact `a; b` statements in the training loop
+    "B905",   # zip() without strict=: lengths are validated by the callers
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "evaluation", "features", "model", "preprocessing", "ui"]

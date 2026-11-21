@@ -1,0 +1,21 @@
+# The Stance Desk: direct dependencies. Tested on Python 3.13 (Windows x64); Python >= 3.11 is required by transformers 5.
+#
+# 1) Install PyTorch first, choosing the build for your hardware (tested: 2.14.1; transformers 5 needs torch >= 2.6).
+#    PyTorch is not listed below because pip cannot choose the CPU/CUDA build for you.
+#      CPU only:    python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+#      NVIDIA GPU:  python -m pip install --only-binary=:all: torch==2.14.1+cu126 --index-url https://download.pytorch.org/whl/cu126
+# 2) Then install the rest:
+#      python -m pip install --only-binary=:all: -r requirements.txt
+#
+# The complete resolved environment that was tested (including torch) is frozen in requirements-lock.txt.
+transformers==5.23.0
+tokenizers==0.23.3
+safetensors==0.8.0
+scikit-learn==1.9.1
+numpy==2.5.5
+scipy==1.18.1
+pandas==3.1.1
+streamlit==1.67.0
+plotly==7.1.0
+joblib==1.6.0
+pytest==9.2.0

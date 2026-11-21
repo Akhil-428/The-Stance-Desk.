@@ -1,0 +1,23 @@
+# Normalise line endings in the repository; check out with the platform default.
+* text=auto
+
+*.py   text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.css  text eol=lf
+*.svg  text eol=lf
+*.cff  text eol=lf
+
+# Windows launchers need CRLF.
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+
+# Binary
+*.jpg  binary
+*.png  binary
+*.safetensors binary
+*.joblib binary

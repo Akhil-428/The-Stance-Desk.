@@ -1,0 +1,8 @@
+{
+  "BERT.csv": "dc967d77505c6a88adee3eb8e66db5987bf4dc23845036b81dff2a9be9dc1fb0",
+  "LogisticRegression_with_CountVectorizer.csv": "244dc0e1562e295eb6d724650890bc8889cb3ca0494eddf2d456d977c0c2eec8",
+  "LogisticRegression_with_TfidfVectorizer.csv": "8f7e437dc69660d5cf86cb61352816aac69eae0fa6d5d12d3a45163e9f6e7797",
+  "BernoulliNB_with_CountVectorizer.csv": "4b5f690e1e3fe1afa87f99c24822175c0e3b01918aab173b10a1702efb969184",
+  "BernoulliNB_with_TfidfVectorizer.csv": "4b5f690e1e3fe1afa87f99c24822175c0e3b01918aab173b10a1702efb969184",
+  "competition_test_stances.csv": "4e3dec5728e80687bafecd2525c77f1b9f8f39b512b2d6d24c45f6d306b91e6a"
+}
